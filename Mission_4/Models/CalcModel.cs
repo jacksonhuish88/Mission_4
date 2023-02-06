@@ -10,22 +10,22 @@ namespace Mission_4.Models
     {
         // Builds Getter & Setter
         [Required]
-        [Range(1, 100)]
+        [Range(0, 100)]
         public int assignments { get; set; }
         [Required]
-        [Range(1, 100)]
+        [Range(0, 100)]
         public int groupProjects { get; set; }
         [Required]
-        [Range(1, 100)]
+        [Range(0, 100)]
         public int quizzes { get; set; }
         [Required]
-        [Range(1, 100)]
+        [Range(0, 100)]
         public int midterm  { get; set; }
         [Required]
-        [Range(1, 100)]
+        [Range(0, 100)]
         public int final { get; set; }
         [Required]
-        [Range(1, 100)]
+        [Range(0, 100)]
         public int intex { get; set; }
 
     }
