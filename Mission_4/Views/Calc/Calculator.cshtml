@@ -1,0 +1,67 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model CalcModel;
+
+<!-- CALCULATOR -->
+<center>
+    <div style="margin-left: 10px; margin-right: 10px; margin-top: 15px; width: 750px; display:inline-block">
+        <div class="col" style="border: solid black; border-radius: 15px; padding: 15px 15px 15px 15px; box-shadow: 2px 2px 4px #000000;" id="calculator">
+            <center>
+                <h3>Grade Calculator</h3>
+                <div>Enter the percent grade for each category</div>
+                <br />
+                <form method="Post">
+                    <div class="col" id='generatedGradeCol' style="margin-bottom:15px; display:inline-block; text-align:center" hidden>
+                        <!-- PREDICTED GRADE -->
+                        <center>
+                            <div style="display:inline-block">Percent Grade:</div>
+                            <div style="display:inline-block" id="calcGrade"></div>
+                            <br />
+                            <div style="display:inline-block">Letter Grade:</div>
+                            <div style="display:inline-block" id="letterGrade"></div>
+                        </center>
+                    </div>
+                    <fieldset>
+                        <!-- CALCULATOR INPUTS GRADE -->
+                        <div class="row">
+                            <div class="col">
+                                <label>Assignments:</label>
+                                <br />
+                                <input type="number" id="assignmentsG" asp-for="assignments"/>
+                                <br /><br />
+                                <label>Group Project:</label>
+                                <br />
+                                <input type="number" id="groupProjectG" asp-for="groupProjects"/>
+                                <br /><br />
+                                <label>Quizzes:</label>
+                                <br />
+                                <input type="number" id="quizzesG" asp-for="quizzes" />
+                                <br /><br />
+                            </div>
+                            <div class="col">
+                                <label>Midterm:</label>
+                                <br />
+                                <input type="number" id="midtermG" asp-for="midterm"/>
+                                <br /><br />
+                                <label>Final:</label>
+                                <br />
+                                <input type="number" id="finalG" asp-for="final"/>
+                                <br /><br />
+                                <label>INTEX:</label>
+                                <br />
+                                <input type="number" id="intexG" asp-for="intex"/>
+                            </div>
+                        </div>
+                        <input id="buttoncalc" class="btn btn-primary" type="submit" value="Calculate" />
+                    </fieldset>
+                    <br />
+                    <div asp-validation-summary="All"></div>
+                </form>
+            </center>
+        </div>
+    </div>
+</center>

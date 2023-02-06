@@ -13,3 +13,13 @@ input{
 label{
     display:inline-block;
 }
+
+nav{
+    padding: 15px 15px 15px 15px;
+    border-bottom: solid black;
+    box-shadow: 4px 4px 4px black;
+}
+
+nav a {
+    padding: 10px 10px 10px 10px;
+}
